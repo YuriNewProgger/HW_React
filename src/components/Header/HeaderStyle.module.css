@@ -1,0 +1,8 @@
+.titleHeader{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(38, 150, 249);
+    color: white;
+}
