@@ -22,7 +22,6 @@ export default class Timer extends React.Component {
     console.log(this.player);
     if(this.state.time == 0){
       console.log('Player ' + this.player + ' stop ' + ' idTimer ' + this.idTimer);
-      clearInterval(this.idTimer);
       return;
     }
     if(this.player != this.currenMove()){
@@ -43,8 +42,9 @@ export default class Timer extends React.Component {
 
   //Вызываеться при полной отрисовке первый раз.
   componentDidMount() {
-    this.idTimer = setInterval(this.updateTimer, 1000);
+    setInterval(this.updateTimer, 1000);
   }
+
 
   render() {
 
