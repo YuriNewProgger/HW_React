@@ -1,4 +1,5 @@
 import React from "react";
+import s from "./Timer.module.css";
 
 export default class Timer extends React.Component {
 
@@ -51,10 +52,10 @@ export default class Timer extends React.Component {
   render() {
 
     return (
-      <div className="timer">
+      <div className={s.timer}>
         <h1>
-          {(this.state.time == 0) ? this.player + ":" + "Time out" :
-          this.player + ":" + (new Date(0, 0, 0, 0, 0, this.state.time)).toLocaleTimeString()
+          {(this.state.time == 0) ? this.player + ": " + "Time out" :
+          this.player + ": " + (new Date(0, 0, 0, 0, 0, this.state.time)).toLocaleTimeString()
           }
         </h1>
         <button disabled={this.state.disabledBtnChange} onClick={this.change}>Передать ход</button>
