@@ -19,9 +19,7 @@ export default class Timer extends React.Component {
 
 
   updateTimer = () => {
-    console.log(this.player);
     if(this.state.time == 0){
-      console.log('Player ' + this.player + ' stop ' + ' idTimer ' + this.idTimer);
       return;
     }
     if(this.player != this.currenMove()){
