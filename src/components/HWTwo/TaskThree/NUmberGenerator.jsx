@@ -16,7 +16,7 @@ let NumberGenerator = (props) =>{
 
     return(
         <div>
-            <h1>Task 3</h1>
+            <h3>Task 3</h3>
             <p>{rnd}</p>
             <button onClick={getRandom}>Получить рандомное число</button>
         </div>

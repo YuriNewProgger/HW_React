@@ -26,6 +26,7 @@ export default class ChessTimer extends React.Component{
   render(){
       return (
         <div>
+            <h1>Chess Timer</h1>
             <Timer Player={0} Time={this.state.time} Update={this.updateTimer} Current={this.getCurrentPlayer} Change={this.change}/>
             <br/>
             <Timer Player={1} Time={this.state.time} Update={this.updateTimer} Current={this.getCurrentPlayer} Change={this.change}/>

@@ -36,7 +36,7 @@ let ForecastBall = () => {
 
     return (
         <div className={s.outterContainer}>
-            <h1>Task 2</h1>
+            <h3>Task 2</h3>
             <div className={s.ball}>
                 <div className={s.innerContent}>
                     <div className={s.reactangle}>

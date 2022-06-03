@@ -1,7 +1,6 @@
 .navContainer{
     width: 20%;
     height: 100vh;
-    /* border-right: 1px solid black; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,5 +9,11 @@
 
 .navContainer>a{
     text-decoration: none;
-    color: black;
+    color: rgb(8, 7, 7);
+    font-weight: bold;
+    margin: 3%;
+}
+
+a:hover{
+    color: #2696f9;
 }

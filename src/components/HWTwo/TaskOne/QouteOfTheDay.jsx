@@ -32,7 +32,7 @@ export default class QuoteOfTheDay extends React.Component{
         return(
             <div>
                 <hr />
-                <h1>Task 1</h1>
+                <h3>Task 1</h3>
                 <q style={{visibility:this.state.visible}}>{this.state.text}</q>
                 <br />
                 <q style={{visibility:this.state.visible}}>{this.state.author}</q>
