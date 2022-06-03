@@ -8,7 +8,7 @@ function Content() {
   return (
         <div className={s.contentContainer}>
           <Routes>
-            <Route path="/ChessTimer" element={<ChessTimer Time={120}/>}/>
+            <Route path="/ChessTimer" element={<ChessTimer Time={5}/>}/>
             <Route path="/HWTwo" element={<HWTwo/>}/>
             <Route path="/*" element={<HWTwo/>}/>
           </Routes>

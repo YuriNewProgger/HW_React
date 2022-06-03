@@ -20,6 +20,10 @@ export default class Timer extends React.Component {
 
   updateTimer = () => {
     if(this.state.time == 0){
+      this.setState(
+        {
+          disabledBtnChange: true
+        });
       return;
     }
     if(this.player != this.currenMove()){
@@ -49,7 +53,9 @@ export default class Timer extends React.Component {
     return (
       <div className="timer">
         <h1>
-          {this.player}: {(new Date(0, 0, 0, 0, 0, this.state.time)).toLocaleTimeString()}
+          {(this.state.time == 0) ? this.player + ":" + "Time out" :
+          this.player + ":" + (new Date(0, 0, 0, 0, 0, this.state.time)).toLocaleTimeString()
+          }
         </h1>
         <button disabled={this.state.disabledBtnChange} onClick={this.change}>Передать ход</button>
       </div>
