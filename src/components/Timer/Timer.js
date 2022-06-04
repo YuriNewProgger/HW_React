@@ -117,8 +117,6 @@ export default class Timer extends React.Component {
       let x = Math.ceil(radius * Math.cos(radAngle) + 105);
       let y = Math.ceil(radius * Math.sin(radAngle) + 105);
 
-      console.log(x + " " + y);
-
       field.push(<circle cx={x} cy={y} r="5" fill="red"/>);
     }
 
