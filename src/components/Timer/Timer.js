@@ -95,7 +95,7 @@ export default class Timer extends React.Component {
     field.push(<text font-weight="bold" x="55" y="100">9</text>);
     field.push(<circle cx="90" cy="135" r="5" fill="red"/>);
 
-    field.push(<text font-weight="bold" x="55" y="55">10</text>);
+    field.push(<text font-weight="bold" x="65" y="55">10</text>);
     field.push(<circle cx="80" cy="100" r="5" fill="red"/>);
     field.push(<text font-weight="bold" x="90" y="30">11</text>);
     field.push(<circle cx="90" cy="65" r="5" fill="red"/>);
