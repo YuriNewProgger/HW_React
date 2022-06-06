@@ -58,7 +58,7 @@ export default class Timer extends React.Component {
   componentDidMount() {
     setInterval(this.updateTimer, 1000);
   }
-/* Ещё один вариант часов.
+
   getArrow = () => {
     let arrows = [];
     arrows.push(<rect transform={`rotate(${this.positionSecond} 150 100)`} x="147.5" y="50" width="5" height="50" stroke="black" fill="green" stroke-width="2"/>);
@@ -103,30 +103,30 @@ export default class Timer extends React.Component {
     field.push(<circle cx="115" cy="40" r="5" fill="red"/>);
 
     return field;
-  }*/
-
-  getTimerField = () => {
-    let field = [];
-    let radius = 100.0025;
-
-    field.push(<circle cx="105" cy="105" r="100" fill="white"/>);
-
-    for (let i = 1; i <= 12; i++) {
-      let radAngle = (radius * i);
-
-      let x = Math.ceil(radius * Math.cos(radAngle) + 105);
-      let y = Math.ceil(radius * Math.sin(radAngle) + 105);
-
-      field.push(<circle cx={x} cy={y} r="5" fill="red"/>);
-    }
-
-    return field;
   }
-  getArrow = () => {
-    let arrows = [];
-    arrows.push(<rect transform={`rotate(${this.positionSecond} 105 105)`} x="100" y="20" width="2" height="90" stroke="black" fill="green" stroke-width="1"/>);    
-    return arrows;
+
+  
+  getBtnPass = () =>{
+    let arr = [];
+    arr.push(
+      <defs>
+        <radialGradient id="RadialGradient1" cx="0.25" cy="0.25" r="0.25">
+          <stop offset="0%" stop-color="white"/>
+          <stop offset="100%" stop-color="#fd4051"/>
+        </radialGradient>
+
+        <filter id="shadow">
+          <feDropShadow dx="1" dy="1" stdDeviation="1"/>
+        </filter>
+      </defs>
+    );
+    
+    arr.push(<rect x="5" y="0" width="150" height="40" ry="25" stroke="#fd4051" fill="transparent" stroke-width="5" filter="url(#shadow)"/>);
+    arr.push(<rect x="15" y="5" width="130" height="30" ry="20" stroke="transparent" stroke-width="1" fill="url(#RadialGradient1)" filter="url(#shadow)"/>);
+    arr.push(<text font-weight="bold" x="25" y="25">Передать ход</text>);
+    return arr;
   }
+
 
   render() {
 
@@ -139,16 +139,9 @@ export default class Timer extends React.Component {
         </h1>
         <button disabled={this.state.disabledBtnChange} onClick={this.change}>Передать ход</button>
         <div style={{margin: '15px'}}>
-          {/* <svg version="1.1"
+          <svg version="1.1"
                width="300" height="200"
                viewBox="0 0 300 200" >
-            {this.getTimerField()}
-            {this.getArrow()}
-          </svg> */}
-
-          <svg version="1.1"
-               width="200" height="200"
-               viewBox="0 0 210 210" >
             {this.getTimerField()}
             {this.getArrow()}
           </svg>
