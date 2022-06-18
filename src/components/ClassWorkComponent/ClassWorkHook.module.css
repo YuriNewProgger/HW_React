@@ -1,0 +1,10 @@
+.field{
+    display: flex;
+    justify-content: space-around;
+    height: 75vh;
+    background-color: rgb(204, 150, 255);
+}
+.field>button{
+    height: 20px;
+    margin: 1%;
+}
