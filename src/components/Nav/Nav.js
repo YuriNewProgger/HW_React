@@ -12,6 +12,7 @@ function Nav() {
         <NavLink to="/HWTwo">HW2</NavLink>
         <NavLink to="/ClassWorkHookComponent">Class work Hook 10.06.2022</NavLink>
         <NavLink to="/BullsAndCowsComponent">Class work 17.06.2022 Bulls and Cows</NavLink>
+        <NavLink to="/DreamsFieldComponent">HW Dreams field</NavLink>
       </nav>
   );
 }
