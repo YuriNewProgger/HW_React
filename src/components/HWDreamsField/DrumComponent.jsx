@@ -21,7 +21,7 @@ function Fill(){
     let radius = 240;
     let radB = 260;
 
-    arr.push(<circle cx="0" cy="0" r="243" fill="black"/>)
+    arr.push(<circle key={0} cx="0" cy="0" r="243" fill="black"/>)
 
 
     for (let i = 1; i <= 12; i++) {
@@ -40,9 +40,9 @@ function Fill(){
         let p = `M 0,0 L${x},${y} Q${x},${y} ${sx},${sy} z`;
 
         if(i % 2 == 0)
-            arr.push(<path d={p} fill="white" stroke="black" stroke-width="1"/>);
+            arr.push(<path key={i+1} d={p} fill="white" stroke="black" strokeWidth="1"/>);
         else
-            arr.push(<path d={p} fill="black" stroke="black" stroke-width="1"/>);
+            arr.push(<path key={i+1} d={p} fill="black" stroke="black" strokeWidth="1"/>);
         
     }
 

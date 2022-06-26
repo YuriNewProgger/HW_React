@@ -1,0 +1,14 @@
+.mainDisplay{
+    display: flex;    
+    justify-content: center;
+}
+.subDisplay{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.inputField{
+    width: 5%;
+    height: 5%;
+}
